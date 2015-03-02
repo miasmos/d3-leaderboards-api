@@ -1,7 +1,7 @@
 # d3-leaderboards-api
 Parses live Diablo 3 Leaderboards and returns them as json.
 
-/season/:era/class/:class => http://us.battle.net/d3/en/rankings/season/:era/rift-:class 
+/season/:era/class/:class => http://us.battle.net/d3/en/rankings/season/:era/rift-:class  
 Fetches the top 1000 seasonal characters of the specified class.
 
 /era/:era/class/:class => http://us.battle.net/d3/en/rankings/era/:era/rift-:class  
