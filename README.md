@@ -3,6 +3,13 @@ Parses live Diablo 3 Leaderboards and returns them as json.
 
 Does not implement caching or throttling. Please do so in your wrapper to limit requests to Blizzard's servers.  
 
+Types
+==========
+Classes: demon-hunter, barbarian, witch-doctor, wizard, monk, crusader  
+Eras: 1, 2  
+Seasons: 1, 2  
+Teams: 2, 3, 4  
+
 Endpoints
 ==========
 /season/:era/class/:class => http://us.battle.net/d3/en/rankings/season/:era/rift-:class  
