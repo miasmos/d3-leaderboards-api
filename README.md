@@ -7,7 +7,6 @@ Types
 ==========
 Classes: demon-hunter, barbarian, witch-doctor, wizard, monk, crusader  
 Eras: 1, 2  
-Seasons: 1, 2  
 Teams: 2, 3, 4  
 
 Endpoints
