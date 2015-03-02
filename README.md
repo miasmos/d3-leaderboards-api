@@ -13,7 +13,7 @@ Fetches the top 1000 seasonal characters of the specified team size.
 /era/:era/team/:team => http://us.battle.net/d3/en/rankings/era/:era/rift-team-:team  
 Fetches the top 1000 non-seasonal characters of the specified team size.
 
-/season/hardcore/:era/class/:class => http://us.battle.net/d3/en/rankings/season/:era/rift-hardcore-:class 
+/season/hardcore/:era/class/:class => http://us.battle.net/d3/en/rankings/season/:era/rift-hardcore-:class  
 Fetches the top 1000 seasonal hardcore characters of the specified class.
 
 /era/hardcore/:era/class/:class => http://us.battle.net/d3/en/rankings/era/:era/rift-hardcore-:class  
