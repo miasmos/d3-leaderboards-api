@@ -58,7 +58,7 @@ var D3Leaderboards = function() {
 			j.rank = rank;
 			j.battleTag = self.prettify($(link).find('.cell-BattleTag a').attr('href'));
 			j.characterGender = $(link).find('.cell-BattleTag img').attr('src');
-			j.characterGender = typeof j.characterGender === 'undefined' ? j.characterGender : j.characterGender.indexOf('male') > -1 ? 'm' : 'f'
+			j.characterGender = typeof j.characterGender === 'undefined' ? j.characterGender : j.characterGender.indexOf('female') > -1 ? 'f' : 'm'
 			j.riftLevel = parseInt(self.prettify($(link).find('.cell-RiftLevel').text()));
 			j.riftTime = parseInt(moment(self.prettify($(link).find('.cell-RiftTime').text()), "mm ss.SSS").format("x"));
 			j.completedTime = parseInt(moment(self.prettify($(link).find('.cell-CompletedTime').text()), "MMMM D, YYYY h:m A").format("X"));
