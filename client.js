@@ -83,18 +83,6 @@ var D3Leaderboards = function() {
 		});
 	};
 
-	/*this.getPages = function(arr, team, seasonal, hardcore, era, cb) {
-		var json = {};
-		async.eachLimit(arr, 2, function(item, cb2) {
-			this.getPage(team, seasonal, hardcore, era, item, function(err, json) {
-				json[item] = this.json;
-				cb2(err);
-			});
-		}, function(err) {
-			cb(err, json);
-		});
-	};*/
-
 	this.prettify = function(str) {if (typeof str === 'undefined') {return str} else {str = str.replace('/d3/en/profile/', ''); return str.replace(/^\s+|\s+$|^\/|\/$/g, '');}}
 };
 
@@ -145,10 +133,5 @@ D3Leaderboards.prototype.HardcoreTeam3s = function(era, cb) {this.getPage(3, fal
 D3Leaderboards.prototype.HardcoreTeam4s = function(era, cb) {this.getPage(4, false, true, era, undefined, cb);}
 D3Leaderboards.prototype.HardcoreClass = function(era, clas, cb) {this.getPage(1, false, true, era, clas, cb);}
 D3Leaderboards.prototype.HardcoreTeam = function(era, team, cb) {this.getPage(team, false, true, era, undefined, cb);}
-
-/*D3Leaderboards.prototype.AllClasses = function(era, cb) {this.getPages(this.classes, 1, false, false, era, cb);}
-D3Leaderboards.prototype.SeasonalAllClasses = function(era, cb) {this.getPages(this.classes, 1, true, false, era, cb);}
-D3Leaderboards.prototype.HardcoreAllClasses = function(era, cb) {this.getPages(this.classes, 1, false, true, era, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreAllClasses = function(era, cb) {this.getPages(this.classes, 1, true, true, era, cb);}*/
 
 module.exports = new D3Leaderboards();
