@@ -74,7 +74,7 @@ var D3Leaderboards = function() {
 		request(this.requestOpts, function(err, resp, html) {
 			if (err) {
 				console.error(err);
-				this.getPage(team, seasonal, hardcore, era, clas, cb);
+				self.getPage(team, seasonal, hardcore, era, clas, cb);
 			} else {
 				self.parseHTML(html, function(json) {
 					cb(err, json);
