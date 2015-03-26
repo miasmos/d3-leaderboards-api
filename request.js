@@ -83,72 +83,55 @@ var D3Leaderboards = function() {
 		});
 	};
 
-	/*this.getPages = function(arr, team, seasonal, hardcore, era, cb) {
-		var json = {};
-		async.eachLimit(arr, 2, function(item, cb2) {
-			this.getPage(team, seasonal, hardcore, era, item, function(err, json) {
-				json[item] = this.json;
-				cb2(err);
-			});
-		}, function(err) {
-			cb(err, json);
-		});
-	};*/
-
 	this.prettify = function(str) {if (typeof str === 'undefined') {return str} else {str = str.replace('/d3/en/profile/', ''); return str.replace(/^\s+|\s+$|^\/|\/$/g, '');}}
-};
 
-D3Leaderboards.prototype.SeasonalBarbarian = function(era, cb) {this.getPage(1, true, false, era, 1, cb);}
-D3Leaderboards.prototype.SeasonalMonk = function(era, cb) {this.getPage(1, true, false, era, 2, cb);}
-D3Leaderboards.prototype.SeasonalDemonHunter = function(era, cb) {this.getPage(1, true, false, era, 3, cb);}
-D3Leaderboards.prototype.SeasonalWitchDoctor = function(era, cb) {this.getPage(1, true, false, era, 4, cb);}
-D3Leaderboards.prototype.SeasonalWizard = function(era, cb) {this.getPage(1, true, false, era, 5, cb);}
-D3Leaderboards.prototype.SeasonalCrusader = function(era, cb) {this.getPage(1, true, false, era, 6, cb);}
-D3Leaderboards.prototype.SeasonalTeam2s = function(era, cb) {this.getPage(2, true, false, era, undefined, cb);}
-D3Leaderboards.prototype.SeasonalTeam3s = function(era, cb) {this.getPage(3, true, false, era, undefined, cb);}
-D3Leaderboards.prototype.SeasonalTeam4s = function(era, cb) {this.getPage(4, true, false, era, undefined, cb);}
-D3Leaderboards.prototype.SeasonalClass = function(era, clas, cb) {this.getPage(1, true, false, era, clas, cb);}
-D3Leaderboards.prototype.SeasonalTeam = function(era, team, cb) {this.getPage(team, true, false, era, undefined, cb);}
+	this.SeasonalBarbarian = function(era, cb) {self.getPage(1, true, false, era, 1, cb);}
+	this.SeasonalMonk = function(era, cb) {self.getPage(1, true, false, era, 2, cb);}
+	this.SeasonalDemonHunter = function(era, cb) {self.getPage(1, true, false, era, 3, cb);}
+	this.SeasonalWitchDoctor = function(era, cb) {self.getPage(1, true, false, era, 4, cb);}
+	this.SeasonalWizard = function(era, cb) {self.getPage(1, true, false, era, 5, cb);}
+	this.SeasonalCrusader = function(era, cb) {self.getPage(1, true, false, era, 6, cb);}
+	this.SeasonalTeam2s = function(era, cb) {self.getPage(2, true, false, era, undefined, cb);}
+	this.SeasonalTeam3s = function(era, cb) {self.getPage(3, true, false, era, undefined, cb);}
+	this.SeasonalTeam4s = function(era, cb) {self.getPage(4, true, false, era, undefined, cb);}
+	this.SeasonalClass = function(era, clas, cb) {self.getPage(1, true, false, era, clas, cb);}
+	this.SeasonalTeam = function(era, team, cb) {self.getPage(team, true, false, era, undefined, cb);}
 
-D3Leaderboards.prototype.SeasonalHardcoreBarbarian = function(era, cb) {this.getPage(1, true, true, era, 1, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreMonk = function(era, cb) {this.getPage(1, true, true, era, 2, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreDemonHunter = function(era, cb) {this.getPage(1, true, true, era, 3, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreWitchDoctor = function(era, cb) {this.getPage(1, true, true, era, 4, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreWizard = function(era, cb) {this.getPage(1, true, true, era, 5, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreCrusader = function(era, cb) {this.getPage(1, true, true, era, 6, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreTeam2s = function(era, cb) {this.getPage(2, true, true, era, undefined, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreTeam3s = function(era, cb) {this.getPage(3, true, true, era, undefined, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreTeam4s = function(era, cb) {this.getPage(4, true, true, era, undefined, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreClass = function(era, clas, cb) {this.getPage(1, true, true, era, clas, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreTeam = function(era, team, cb) {this.getPage(team, true, true, era, undefined, cb);}
+	this.SeasonalHardcoreBarbarian = function(era, cb) {self.getPage(1, true, true, era, 1, cb);}
+	this.SeasonalHardcoreMonk = function(era, cb) {self.getPage(1, true, true, era, 2, cb);}
+	this.SeasonalHardcoreDemonHunter = function(era, cb) {self.getPage(1, true, true, era, 3, cb);}
+	this.SeasonalHardcoreWitchDoctor = function(era, cb) {self.getPage(1, true, true, era, 4, cb);}
+	this.SeasonalHardcoreWizard = function(era, cb) {self.getPage(1, true, true, era, 5, cb);}
+	this.SeasonalHardcoreCrusader = function(era, cb) {self.getPage(1, true, true, era, 6, cb);}
+	this.SeasonalHardcoreTeam2s = function(era, cb) {self.getPage(2, true, true, era, undefined, cb);}
+	this.SeasonalHardcoreTeam3s = function(era, cb) {self.getPage(3, true, true, era, undefined, cb);}
+	this.SeasonalHardcoreTeam4s = function(era, cb) {self.getPage(4, true, true, era, undefined, cb);}
+	this.SeasonalHardcoreClass = function(era, clas, cb) {self.getPage(1, true, true, era, clas, cb);}
+	this.SeasonalHardcoreTeam = function(era, team, cb) {self.getPage(team, true, true, era, undefined, cb);}
 
-D3Leaderboards.prototype.Barbarian = function(era, cb) {this.getPage(1, false, false, era, 1, cb);}
-D3Leaderboards.prototype.Monk = function(era, cb) {this.getPage(1, false, false, era, 2, cb);}
-D3Leaderboards.prototype.DemonHunter = function(era, cb) {this.getPage(1, false, false, era, 3, cb);}
-D3Leaderboards.prototype.WitchDoctor = function(era, cb) {this.getPage(1, false, false, era, 4, cb);}
-D3Leaderboards.prototype.Wizard = function(cb) {this.getPage(1, false, false, era, 5, cb);}
-D3Leaderboards.prototype.Crusader = function(era, cb) {this.getPage(1, false, false, era, 6, cb);}
-D3Leaderboards.prototype.Team2s = function(era, cb) {this.getPage(2, false, false, era, undefined, cb);}
-D3Leaderboards.prototype.Team3s = function(era, cb) {this.getPage(3, false, false, era, undefined, cb);}
-D3Leaderboards.prototype.Team4s = function(era, cb) {this.getPage(4, false, false, era, undefined, cb);}
-D3Leaderboards.prototype.Class = function(era, clas, cb) {this.getPage(1, false, false, era, clas, cb);}
-D3Leaderboards.prototype.Team = function(era, team, cb) {this.getPage(team, false, false, era, undefined, cb);}
+	this.Barbarian = function(era, cb) {self.getPage(1, false, false, era, 1, cb);}
+	this.Monk = function(era, cb) {self.getPage(1, false, false, era, 2, cb);}
+	this.DemonHunter = function(era, cb) {self.getPage(1, false, false, era, 3, cb);}
+	this.WitchDoctor = function(era, cb) {self.getPage(1, false, false, era, 4, cb);}
+	this.Wizard = function(cb) {self.getPage(1, false, false, era, 5, cb);}
+	this.Crusader = function(era, cb) {self.getPage(1, false, false, era, 6, cb);}
+	this.Team2s = function(era, cb) {self.getPage(2, false, false, era, undefined, cb);}
+	this.Team3s = function(era, cb) {self.getPage(3, false, false, era, undefined, cb);}
+	this.Team4s = function(era, cb) {self.getPage(4, false, false, era, undefined, cb);}
+	this.Class = function(era, clas, cb) {self.getPage(1, false, false, era, clas, cb);}
+	this.Team = function(era, team, cb) {self.getPage(team, false, false, era, undefined, cb);}
 
-D3Leaderboards.prototype.HardcoreBarbarian = function(era, cb) {this.getPage(1, false, true, era, 1, cb);}
-D3Leaderboards.prototype.HardcoreMonk = function(era, cb) {this.getPage(1, false, true, era, 2, cb);}
-D3Leaderboards.prototype.HardcoreDemonHunter = function(era, cb) {this.getPage(1, false, true, era, 3, cb);}
-D3Leaderboards.prototype.HardcoreWitchDoctor = function(era, cb) {this.getPage(1, false, true, era, 4, cb);}
-D3Leaderboards.prototype.HardcoreWizard = function(era, cb) {this.getPage(1, false, true, era, 5, cb);}
-D3Leaderboards.prototype.HardcoreCrusader = function(era, cb) {this.getPage(1, false, true, era, 6, cb);}
-D3Leaderboards.prototype.HardcoreTeam2s = function(era, cb) {this.getPage(2, false, true, era, undefined, cb);}
-D3Leaderboards.prototype.HardcoreTeam3s = function(era, cb) {this.getPage(3, false, true, era, undefined, cb);}
-D3Leaderboards.prototype.HardcoreTeam4s = function(era, cb) {this.getPage(4, false, true, era, undefined, cb);}
-D3Leaderboards.prototype.HardcoreClass = function(era, clas, cb) {this.getPage(1, false, true, era, clas, cb);}
-D3Leaderboards.prototype.HardcoreTeam = function(era, team, cb) {this.getPage(team, false, true, era, undefined, cb);}
-
-/*D3Leaderboards.prototype.AllClasses = function(era, cb) {this.getPages(this.classes, 1, false, false, era, cb);}
-D3Leaderboards.prototype.SeasonalAllClasses = function(era, cb) {this.getPages(this.classes, 1, true, false, era, cb);}
-D3Leaderboards.prototype.HardcoreAllClasses = function(era, cb) {this.getPages(this.classes, 1, false, true, era, cb);}
-D3Leaderboards.prototype.SeasonalHardcoreAllClasses = function(era, cb) {this.getPages(this.classes, 1, true, true, era, cb);}*/
+	this.HardcoreBarbarian = function(era, cb) {self.getPage(1, false, true, era, 1, cb);}
+	this.HardcoreMonk = function(era, cb) {self.getPage(1, false, true, era, 2, cb);}
+	this.HardcoreDemonHunter = function(era, cb) {self.getPage(1, false, true, era, 3, cb);}
+	this.HardcoreWitchDoctor = function(era, cb) {self.getPage(1, false, true, era, 4, cb);}
+	this.HardcoreWizard = function(era, cb) {self.getPage(1, false, true, era, 5, cb);}
+	this.HardcoreCrusader = function(era, cb) {self.getPage(1, false, true, era, 6, cb);}
+	this.HardcoreTeam2s = function(era, cb) {self.getPage(2, false, true, era, undefined, cb);}
+	this.HardcoreTeam3s = function(era, cb) {self.getPage(3, false, true, era, undefined, cb);}
+	this.HardcoreTeam4s = function(era, cb) {self.getPage(4, false, true, era, undefined, cb);}
+	this.HardcoreClass = function(era, clas, cb) {self.getPage(1, false, true, era, clas, cb);}
+	this.HardcoreTeam = function(era, team, cb) {self.getPage(team, false, true, era, undefined, cb);}
+}
 
 module.exports = new D3Leaderboards();
