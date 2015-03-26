@@ -1,5 +1,5 @@
 var express = require('express');
-var d3lb = require('./request');
+var d3lb = require('./client');
 var app = express();
 
 app.param('team', function(req, res, next, id) {
