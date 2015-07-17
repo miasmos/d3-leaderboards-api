@@ -6,7 +6,7 @@ Does not implement caching or throttling. Please do so in your wrapper to limit 
 Types
 ==========
 Classes: demon-hunter, barbarian, witch-doctor, wizard, monk, crusader  
-Eras: 1, 2  
+Eras: 1, 2, 3, 4  
 Teams: 2, 3, 4  
 
 Endpoints
