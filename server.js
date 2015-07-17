@@ -10,7 +10,7 @@ app.param('team', function(req, res, next, id) {
 	}
 });
 app.param('era', function(req, res, next, id) {
-	if (req.params.era != '1' && req.params.era != '2') {
+	if (req.params.era != '1' && req.params.era != '2' && req.params.era != '3' && req.params.era != '4') {
 		endReq(req, res, "invalid era");
 	} else {
 		next();
