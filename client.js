@@ -19,7 +19,7 @@ var D3Leaderboards = function() {
 		nonseasonHardcore: 'era/%era%/rift-hardcore',
 
 	};
-	this.eras = {1:'1', 2:'2', 3:'3', 4:'4'};
+	this.eras = {1:'1', 2:'2', 3:'3', 4:'4', 5:'5'};
 	this.classes = {
 		1: 'barbarian', 
 		2: 'monk', 
