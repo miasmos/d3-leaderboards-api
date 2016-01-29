@@ -1,6 +1,6 @@
 {
   "name": "diablo-leaderboards",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Parses the Diablo leaderboards into an api",
   "main": "server.js",
   "keywords": "d3, diablo, diablo 3, leaderboard, leaderboards, api",
